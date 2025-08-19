@@ -14,7 +14,7 @@ import FAQSection from "@/components/FAQ_section";
 import LocationComponent from "@/components/OurLocation";
 import Featuring from "@/components/featuring";
 import { useEffect, useRef, useState } from "react";
-import SubscriptionPopup, { PopupConfig } from '../components/SubscriptionPopup'; // Import new popup and config type
+// import SubscriptionPopup, { PopupConfig } from '../components/SubscriptionPopup'; // Import new popup and config type
 import Logo from "@/../public/Images/logo.webp";
 import InstagramCarousel from "@/components/InstagramCarousel";
 import Story from "@/components/Story";
@@ -39,40 +39,9 @@ export default function Home() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
-  
-
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [popupConfig, setPopupConfig] = useState<PopupConfig | null>(null);
-
-  // Define the constant redirect URL
-  const mealKeywayOrderUrl = "https://order.mealkeyway.com/customer/release/index?mid=674a336c694d346a53507453652b6d614b742b7345673d3d&utm_source=google&rwg_token=AAiGsoYpD58QwquOM6IMU90kRl7Z3Vb_vkjRnP4hMqMNDNB4aFqMwAmKRhCCAe8TPcMRH72Qc2irT-q3EAOXEg1OP0_L8QaiuA%3D%3D#/main";
-
-
-  const redirectPopupConfig: PopupConfig = {
-      mode: 'redirect',
-      title: 'WARNING!!!',
-      message: 'Entering Your Email May Cause Serious Regular Cravings',
-      submitButtonText: 'Spice Me Up!',
-      targetUrl: mealKeywayOrderUrl // Target URL for redirect mode
-  };
-
-
-    // Function for buttons that should trigger the REDIRECT popup flow
-    const handleRedirectFlowClick = () => {
-      const alreadySubscribed = localStorage.getItem('newsletterSubscribed') === 'true';
-
-      if (alreadySubscribed) {
-          console.log("Button: Already subscribed, redirecting...");
-          window.location.href = mealKeywayOrderUrl;
-      } else {
-          console.log("Button: Opening redirect popup...");
-          setPopupConfig(redirectPopupConfig); 
-          setIsPopupOpen(true);
-      }
-  };
-
-  return (
+    return (  
     <div className="p-[10px]">
+      <Header />
 
       <div className="sm:h-[20px]" />
 
@@ -121,7 +90,7 @@ export default function Home() {
           <ThemeButton
             text="View Full Menu"
             textClassname="pr-[8px] pl-[14px]"
-            onClick={handleRedirectFlowClick}
+            // onClick={handleRedirectFlowClick}
           />
 
           <ThemeButton

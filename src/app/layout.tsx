@@ -6,7 +6,6 @@ import "./globals.css";
 import TabTitleHandler from "@/components/TabTitleHandler";
 import Script from 'next/script';
 import ClientLayout from "@/components/ClientLayout"; // Import the new client wrapper
-import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,13 +46,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TabTitleHandler/>
+        <TabTitleHandler />
 
-        <ClientLayout>
+        {children}
+        {/* <ClientLayout>
           <AuthProvider>
             {children}
           </AuthProvider>
-        </ClientLayout>
+        </ClientLayout> */}
 
 
         {gaMeasurementId && (
@@ -66,7 +66,7 @@ export default function RootLayout({
               id="google-analytics"
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{
-                 __html: `
+                __html: `
                    window.dataLayer = window.dataLayer || [];
                    function gtag(){dataLayer.push(arguments);}
                    gtag('js', new Date());
