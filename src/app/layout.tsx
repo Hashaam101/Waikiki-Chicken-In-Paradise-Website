@@ -5,7 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TabTitleHandler from "@/components/TabTitleHandler";
 import Script from 'next/script';
-import ClientLayout from "@/components/ClientLayout"; // Import the new client wrapper
+// import ClientLayout from "@/components/ClientLayout"; // Import the new client wrapper
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
