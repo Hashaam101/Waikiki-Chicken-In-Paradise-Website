@@ -41,7 +41,7 @@ export default function Home() {
   };
     return (  
     <div className="p-[10px]">
-      <Header />
+      <Header onClick={() => { /* handle header click here or leave empty */ }} />
 
       <div className="sm:h-[20px]" />
 
