@@ -41,13 +41,11 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ onBlogClick
 								width: hoveredButton === 'right' ? "0%" : "100%",
 								borderTopLeftRadius: hoveredButton === 'left' ? "8px" : "0px",
 								borderBottomLeftRadius: hoveredButton === 'left' ? "8px" : "0px",
-                translateY: hoveredButton === 'left' ? -1 : 0,
-                scale: hoveredButton === 'left' ? 1.05 : 1
 							}}
 							initial={{ width: "100%", right: "0%" }}
 							transition={{ duration: 0.3, ease: "easeInOut" }}
 						>
-							Blogs
+							Call us
 						</motion.div>
           </div>
         </motion.button>
@@ -77,15 +75,13 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ onBlogClick
 								borderTopLeftRadius: hoveredButton === 'right' ? "8px" : "0px",
 								borderBottomLeftRadius: hoveredButton === 'right' ? "8px" : "0px",
                 opacity: hoveredButton === 'left' ? 0 : 1,
-                translateY: hoveredButton === 'right' ? -1 : 0,
-                scale: hoveredButton === 'right' ? 1.05 : 1
 							}}
 							initial={{ width: "50%", right: "0%" }}
 							transition={{ duration: 0.3, ease: "easeInOut" }}
 
               onClick={onRedirectClick}
 						>
-							Takeaway
+							Order Now
 						</motion.div>
 						<div className='flex justify-end m-[5px]'>
 							<div className="w-[31px] h-[31px] bg-black/25 rounded-[7px] flex items-center justify-center">

@@ -199,10 +199,10 @@ export default function Home() {
 
       <footer className="bg-white text-black w-full px-[10px] md:px-[50px] lg:px-[70px]">
         <div className="text-h3 sm:text-h2 text-black w-full">
-          Seasons Taiwanese Eatery
+          Waikiki Chicken In Paradise
         </div>
         <div className="mb-[32px] mx-2 text-grey text-normal2">
-          Seasons Taiwanese Eatery is a beloved family-run restaurant in Honolulu, serving authentic Taiwanese food since 1994 — from crispy popcorn chicken to rich beef noodle soup, it's where locals go to satisfy real Taiwanese cravings.
+          Waikiki Chicken In Paradise is a beloved family-run restaurant in Honolulu, serving authentic Taiwanese food since 1994 — from crispy popcorn chicken to rich beef noodle soup, it's where locals go to satisfy real Taiwanese cravings.
         </div>
 
         <div className="container mx-auto">
@@ -211,7 +211,7 @@ export default function Home() {
             <div className="col-span-2 lg:col-span-1 mx-auto flex flex-row items-center lg:items-start gap-4">
               <Image
                 src={Logo}
-                alt="Seasons Taiwanese Eatery Logo"
+                alt="Waikiki Chicken In Paradise Logo"
                 width={100} // Adjust size as needed
                 height={100} // Adjust size as needed
                 className="object-contain w-auto h-[200px] md:h-[230px] aspect-square "
@@ -309,7 +309,7 @@ export default function Home() {
         <div className="bg-primary rounded-full text-white w-[90%] mx-auto min-h-[37px] py-[10px] sm:px-[50px] md:px-[100px]">
           <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center text-normal4 gap-[20px]">
             <p className="hidden sm:block">
-            Seasons Taiwanese Eatery Inc. 2025 All Rights Reserved
+            Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
             </p>
             <p className="text-nowrap">
               Made with&nbsp;<a target="_blank" href="http://tableturnerr.com"><span className="hover:underline">TableTurnerr.com </span></a>
@@ -317,7 +317,7 @@ export default function Home() {
           </div>
         </div>
         <div className="justify-between items-center text-center text-[10px] mt-1 flex sm:hidden">
-        Seasons Taiwanese Eatery Inc. 2025 All Rights Reserved
+        Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
         </div>
       </footer>
     </div>

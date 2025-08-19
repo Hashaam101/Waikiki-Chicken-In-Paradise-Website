@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 // --- METADATA STAYS HERE ---
 export const metadata: Metadata = {
-  title: "Seasons Taiwanese Eatery",
+  title: "Waikiki Chicken In Paradise",
   description: "Savor the Best Taiwanese Food in Honolulu. A Taiwanese eatery that offers a unique dining experience with a focus on authentic flavors and seasonal ingredients.",
   keywords: "Taiwanese food, Honolulu, authentic flavors, seasonal ingredients, dining experience",
   robots: {

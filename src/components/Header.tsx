@@ -61,21 +61,31 @@ function Header( {onClick} : {onClick: () => void}) {
 
         {/* Center Section (Always Centered) */}
         <div className={`flex justify-start md:justify-center`}>
-          <div className=" text-white" onClick={() => router.push("/")}>
+            <div
+            className="relative text-white cursor-pointer"
+            onClick={() => router.push("/")}
+            >
+            <span
+              className="absolute inset-0 rounded-full border-[0.5px]"
+              style={{
+              borderColor: "rgba(0,0,0,0.15)",
+              pointerEvents: "none",
+              }}
+            />
             <Image
               src={logo}
-              alt="Seasons Taiwanese Eatery Logo"
+              alt="Waikiki Chicken In Paradise Logo"
               width={70}
               height={70}
-              className="object-cover"
+              className="object-cover rounded-full"
               priority
             />
-          </div>
+            </div>
         </div>
 
         {/* Right Section */}
         <div className="flex justify-end w-full">
-            <AnimatedCTAButton onRedirectClick={onClick} onBlogClick={() => {router.push("/blogs")}}/>
+            <AnimatedCTAButton onRedirectClick={onClick} onBlogClick={() => {router.push("/Instagram")}}/>
         </div>
       </div>
     </div>
