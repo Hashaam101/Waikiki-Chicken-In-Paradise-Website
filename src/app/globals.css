@@ -1,3 +1,22 @@
+/* Custom pointer cursor for .cursor-custom-pointer */
+.cursor-custom-pointer {
+  cursor: url('/Cursor/Squad%20Busters%20Chicken%20Animated--pointer--SweezyCursors..cur'), pointer !important;
+}
+/* Force custom pointer cursor for all .cursor-pointer elements */
+.cursor-pointer {
+  cursor: url('/Cursor/Squad%20Busters%20Chicken%20Animated--pointer--SweezyCursors..cur'), pointer !important;
+}
+/* Force custom pointer cursor for Instagram section interactive elements */
+.InstagramGrid *:hover,
+.InstagramGrid *:active,
+.InstagramGrid *:focus,
+.InstagramGrid *[role="button"],
+.InstagramGrid a,
+.InstagramGrid button,
+.InstagramGrid input[type="button"],
+.InstagramGrid input[type="submit"] {
+  cursor: url('/Cursor/Squad%20Busters%20Chicken%20Animated--pointer--SweezyCursors..cur'), pointer !important;
+}
 @import "tailwindcss";
 
 @import "./../styles/_variables.css"; 
@@ -69,5 +88,14 @@
     overflow-y: auto !important;
     background: var(--tt-bg-color);
     color: var(--tt-color-text-gray);
+  cursor: auto;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"],
+  a:hover, button:hover, [role="button"]:hover, input[type="submit"]:hover, input[type="button"]:hover,
+  a:active, button:active, [role="button"]:active, input[type="submit"]:active, input[type="button"]:active,
+  a:focus, button:focus, [role="button"]:focus, input[type="submit"]:focus, input[type="button"]:focus,
+  a::after, a::before, button::after, button::before {
+    cursor: url('/Cursor/Squad%20Busters%20Chicken%20Animated--pointer--SweezyCursors..cur'), pointer !important;
   }
 }

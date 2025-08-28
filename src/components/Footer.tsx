@@ -8,7 +8,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
             Waikiki Chicken In Paradise
         </div>
         <div className="mb-[32px] mx-2 text-normal2">
-            Bubble tea and soufflé pancakes in Honolulu, featuring Waikiki Chicken In Paradise’s viral Coco Mango dessert.
+            Enjoy crispy, island-style fried chicken made fresh daily in the heart of Waikiki. From quick bites to catering, Waikiki Chicken in Paradise brings flavor and aloha to every meal.
         </div>
         <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 min-h-[100px] lg:grid-cols-3 gap-[10px] lg:gap-8">
@@ -23,12 +23,12 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                     />
                     <div className="flex h-[120px] justify-evenly gap-[10px] flex-col my-auto max-w-100">
                         <a
-                              href="https://www.instagram.com/waikikichickeninparadise/"
-                              aria-label="Instagram"
-                              className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
-                              style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
-                              onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, black 30%, transparent)'}
-                              onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
+                            href="https://www.instagram.com/waikikichickeninparadise/"
+                            aria-label="Instagram"
+                            className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
+                            style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
+                            onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, black 30%, transparent)'}
+                            onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -63,12 +63,12 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                             </svg>
                         </a>
                         <a
-                              href="https://www.yelp.com/biz/waikiki-chicken-in-paradise-honolulu"
-                              aria-label="Yelp"
-                              className="p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
-                              style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
-                              onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, black 30%, transparent)'}
-                              onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
+                            href="https://www.yelp.com/biz/waikiki-chicken-in-paradise-honolulu"
+                            aria-label="Yelp"
+                            className="p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
+                            style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
+                            onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, black 30%, transparent)'}
+                            onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--color-white) 5%, transparent)'}
                         >
                             <svg height="22" width="22" viewBox="0 0 228.097 228.097" xmlns="http://www.w3.org/2000/svg" style={{ color: 'var(--tt-color-text-gray)' }}>
                                 <g>
@@ -146,7 +146,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                     Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
                 </p>
                 <p className="text-nowrap">
-                    Made with&nbsp;<a target="_blank" href="http://tableturnerr.com"><span className="hover:underline">TableTurnerr.com </span></a>
+                    Made with <a target="_blank" href="http://tableturnerr.com" className="hover:underline cursor-pointer">TableTurnerr.com</a>
                 </p>
             </div>
         </div>

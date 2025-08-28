@@ -14,7 +14,7 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ buttonLeft,
   const [hoveredButton, setHoveredButton] = useState<'left' | 'right' | null>(null);
   
   return (
-    <div className="flex justify-center items-center w-[221px] h-[41px]">
+  <div className="flex justify-center items-center w-[221px] h-[41px] cursor-pointer">
       <div className="relative w-full max-w-lg h-full">
         {/* Left Button */}
         <motion.button
