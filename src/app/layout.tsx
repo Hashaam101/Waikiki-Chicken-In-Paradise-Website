@@ -19,34 +19,26 @@ const geistMono = Geist_Mono({
 
 // --- METADATA STAYS HERE ---
 export const metadata: Metadata = {
-  title: "Sun Tea Mix | Best Boba, Soufflé Pancakes & Desserts in Honolulu",
-  description: "Takeaway & Delivery Available. Refreshing Boba, Soufflé Pancakes, Smoothies. Serving the Best Boba & Desserts in Honolulu. Savor the Best Bubble Tea & Soufflé Pancakes Near You! 4.5 ★ average from 374 reviews across all platforms. Located at 400 Keawe St, Honolulu, HI 96813. Open Daily: 11:00 AM – 9:00 PM.",
+  title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
+  description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
   keywords: [
-    "bubble tea", "boba bubble tea near me", "bubble tea shop near me", "bubble tea store", "bubble tea honolulu", "bubble tea waikiki", "bubble tea delivery", "bubble tea catering", "milk tea honolulu", "bubble tea open now", "bubble tea places near me", "bubble tea near me now",
-    "fruit tea", "fruit tea near me", "fortune tea hawaii", "fruit tea drink", "fruit tea bubbles",
-    "milk tea", "milk tea near me", "milk tea taro", "milk tea thai", "milk tea flavors", "milk tea delivery", "milk tea mix", "milk tea places near me", "milk tea shop", "milk tea menu", "milk tea open now near me", "milk tea open near me", "milk tea ingredients",
-    "boba near me", "boba", "boba tea near me", "boba tea", "boba shops near me", "boba house", "boba places near me", "boba cafe", "boba tea protein", "boba places", "boba pops", "boba near me open now", "boba drink", "boba protein", "boba shop", "boba milk tea",
-    "bubble tea near me", "bubble tea", "bubble tea shop", "bubble tea cafe", "bubble tea places near me",
-    "smoothie", "smoothie recipes", "smoothie bowls near me", "smoothie place near me", "smoothie bowl", "smoothie bar near me", "smoothie king acai bowl", "smoothie shop near me", "smoothie delivery near me",
-    "dessert honolulu", "dessert places near me", "dessert open now near me", "dessert cafe", "dessert places honolulu", "souffle pancakes",
-    "yoghurt smoothie honolulu", "yoghurt smoothie", "yogurt smoothie drinks", "smoothie yogurt and frozen fruit", "yoghurt banana smoothie", "yoghurt berry smoothie", "yoghurt based smoothie", "yogurt in smoothie bowl", "yogurt shakes smoothies",
-    "pancake", "pancakes", "pancakes near me", "pancake recipe", "pancake house", "pancake house near me", "pancake japanese", "pancake restaurant", "souffle pancakes", "souffle pancakes honolulu", "souffle pancakes waikiki", "souffle pancakes oahu", "souffle pancakes restaurant near me"
+    "fried chicken", "waikiki chicken", "fish and chips", "food truck waikiki", "fast food waikiki", "best fried chicken honolulu", "crispy chicken sandwich", "loaded fries", "hawaiian flavors", "gluten free", "vegan friendly", "easy parking", "dine-in", "take away", "reservations", "waikiki beach", "honolulu food truck"
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Sun Tea Mix | Best Boba, Soufflé Pancakes & Desserts in Honolulu",
-    description: "Takeaway & Delivery Available. Refreshing Boba, Soufflé Pancakes, Smoothies. Serving the Best Boba & Desserts in Honolulu. Savor the Best Bubble Tea & Soufflé Pancakes Near You! 4.5 ★ average from 374 reviews across all platforms. Located at 400 Keawe St, Honolulu, HI 96813. Open Daily: 11:00 AM – 9:00 PM.",
-    url: "https://sun-tea-mix.vercel.app/",
-    siteName: "Sun Tea Mix Honolulu",
+    title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
+    description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
+    url: "https://waikiki-chicken-paradise.vercel.app/",
+    siteName: "Waikiki Chicken In Paradise",
     images: [
       {
         url: "/Images/Logo.webp",
         width: 400,
         height: 400,
-        alt: "Sun Tea Mix Logo"
+        alt: "Waikiki Chicken In Paradise Logo"
       }
     ],
     locale: "en_US",
@@ -54,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@SunTeaMix808",
-    title: "Sun Tea Mix | Best Boba, Soufflé Pancakes & Desserts in Honolulu",
-    description: "Takeaway & Delivery Available. Refreshing Boba, Soufflé Pancakes, Smoothies. Serving the Best Boba & Desserts in Honolulu. Savor the Best Bubble Tea & Soufflé Pancakes Near You! 4.5 ★ average from 374 reviews across all platforms.",
+    site: "https://waikiki-chicken-paradise.vercel.app/",
+    title: "Waikiki Chicken In Paradise | Fried Chicken | Fish & Chips | Fast Food | Food Truck Waikiki",
+    description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
     images: ["/Images/Logo.webp"]
   }
 };
@@ -72,7 +64,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+  <html lang="en" className="dark">
       <head>
 
       </head>

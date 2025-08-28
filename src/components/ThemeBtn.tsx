@@ -34,8 +34,8 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
     arrowRotation = -45,
     textColor = "text-white",
     textClassname = "",
-    borderColor = "border-primary/50",
-    borderHoverColor = "border-primary-dark",
+    borderColor = "border-primary-dark",
+    borderHoverColor = "border-primary",
     iconBgColor = "bg-white/10",
     iconBgHoverColor = "bg-black/25",
     iconColor = "text-white",
@@ -47,7 +47,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
 
     // Define the common visual content
     const buttonContent = (
-        <div className={`group ${className} border ${borderColor} hover:scale-105 shadow-lg hover:shadow-xl rounded-[9px] min-w-[157px] min-h-[41px] w-fit overflow-hidden flex hover:bg-primary-dark bg-primary transition-all duration-200 items-center ${borderHoverColor}`}>
+    <div className={`group ${className} border ${borderColor} hover:scale-105 shadow-lg hover:shadow-xl rounded-[9px] min-w-[157px] min-h-[41px] w-fit overflow-hidden flex bg-primary-dark hover:bg-primary transition-all duration-200 items-center ${borderHoverColor}`}>
             <div className={`text-nowrap text-normal2 font-bold ${textColor} ${textClassname} mx-auto h-full flex items-center justify-center`}>
                 {text}
             </div>

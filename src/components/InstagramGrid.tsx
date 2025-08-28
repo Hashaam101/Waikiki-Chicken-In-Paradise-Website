@@ -127,7 +127,7 @@ const InstagramGrid: React.FC<InstagramGridProps> = ({ posts }) => {
 						return (
 							<motion.div
 								key={post.id}
-								className="relative rounded-lg shadow-lg cursor-pointer bg-white border border-primary-dark"
+								className="relative rounded-lg shadow-lg cursor-pointer bg-white"
 								onMouseEnter={() => setHoveredId(post.id)}
 								onMouseLeave={() => setHoveredId(null)}
 								animate={{

@@ -44,33 +44,33 @@ const Reviews = () => {
                         className="sm:text-normal1 md:text-h5 w-full text-center font-medium mt-[20px]"
                         style={{ color: 'color-mix(in oklab, var(--color-white) 50%, transparent)' }}
                     >
-                        Check out our most recent reviews!
+                            Here are some reviews from our <a href='https://maps.app.goo.gl/1PtPGhkGc5cPMqbm9' target='_blank' rel='noopener noreferrer' className='hover:underline'>Google Maps!</a>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <ReviewCard
                         starCount={5}
-                        reviewText="Decent soufflé pancakes! The portion size is perfect for a snack (two pancakes stacked on top of each other). The batter was a tad bit dense to my liking, but still tasted pretty good!"
-                        reviewerName="Annabelle"
-                        redirect="https://share.google/YdqJhukpUi5VXdjk6"
-                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjUs9lwlKXd1-__EZbxkXZtNOrgwZIEcO9vqV1Us_QGyNPwUChik=s64-c-rp-mo-ba4-br100"
+                        reviewText="Great food, delicious crispy chicken (tried the sando and chicken curry). Both recommended. Hawaiian pineapple hotdog was a perfect balance of spicy and sweet! Very satisfying!"
+                        reviewerName="Anzonette Pittet"
+                        redirect="https://maps.app.goo.gl/6VQi5GkTPUhaH7Q67"
+                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjXVju4wT3qwJoEJjmSEZJ1B6gMFVQDQHWs5dwxpbVxTCNAGA5gcYg=w49-h49-p-rp-mo-ba2-br100"
                     />
 
                     <ReviewCard
                         starCount={5}
-                        reviewText="Cute place that we happened to stop by on a Monday afternoon around 4:30 pm. They have a nice dining area with games, plenty of outlets, and wifi. The tea came out quickly..."
-                        reviewerName="David Yoshihara"
-                        redirect='https://share.google/w5GAVS5ef4PdGoGpK'
-                        profileImage="https://lh3.googleusercontent.com/a/ACg8ocJ89b1vjJCWGQDcclijv6oKsiXEt0pTEiur-NBQ5cjRbZ-6oA=s64-c-rp-mo-ba5-br100"
+                        reviewText="Tried the Fried Chicken Sando and was blown away by the flavors. The radish pickles gave it a tangy crunch, and I picked the Pineapple Ginger sauce super unique and refreshing! The portion was generous."
+                        reviewerName="Nat View"
+                        redirect='https://maps.app.goo.gl/nnxk38NXfxj8S6nR8'
+                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjVZp7V7rCzpDKb7KvtQTJxMhPI-Quvk7QvzuQzwBj2pJpM4tWBB=w49-h49-p-rp-mo-ba3-br100"
                     />
 
                     <ReviewCard
                         starCount={5}
-                        reviewText="Best place in Honolulu to have a cup of tea. The interior is really aesthetic and calm. The place is really suitable if you want to work/study as it remains quite mostly..."
-                        reviewerName="SK. Fazlee Rabby"
-                        redirect='https://share.google/2NkwLo0iD89kijQDY'
-                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjUor4h9s_b-YhMbEVE-lkZ2u1Orl3dJuIb2zcdnyjdMC2nsXk4=s64-c-rp-mo-ba3-br100"
+                        reviewText="I got the loco moco fried chicken plate. The salad was tasty; the chicken was crispy outside and soft inside; the egg was perfect. Our food came in a reasonable amount of time. The gravy was amazing."
+                        reviewerName="Patt Promsit"
+                        redirect='https://maps.app.goo.gl/EJkBnjWVj5Hf9nnf7'
+                        profileImage="https://lh3.googleusercontent.com/a-/ALV-UjXGwFtBMZLbY2NUv0qTojknmbOWcb_h8L4pqAuYtajzDfQIK_s=w49-h49-p-rp-mo-br100"
                     />
                 </div>
 

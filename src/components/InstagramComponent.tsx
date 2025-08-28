@@ -27,7 +27,7 @@ const InstagramFeed: React.FC<{ posts: InstagramPost[] }> = ({ posts }) => {
 	return (
 		<div className="">
 			<div className="lg:container mx-auto px-4">
-				<h1 className="text-h3 sm:text-h2 text-black w-full text-center mb-[20px]">
+				<h1 className="text-h3 sm:text-h2 text-[var(--tt-color-text-gray)] w-full text-center mb-[20px]">
 					Instagram Feed
 				</h1>
 
@@ -44,49 +44,48 @@ const InstagramFeed: React.FC<{ posts: InstagramPost[] }> = ({ posts }) => {
 const InstagramComponent = () => {
 
 	const Posts: InstagramPost[] = [
-	{
-		id: "1",
-		title: "keaweretail",
-		image: "/Images/insta/1.jpg",
-		url: "https://www.instagram.com/p/DNJTIZQvKoZ/",
-		description: "School’s in, but @sunteamix808 makes study time sweet. 🧋📚 Your tastiest study buddy is waiting! 🍓🥭💫  #sunteamix808 #keaweretail #ourkakaako #hawaiifoodie #freshfruits #studyspot #milkteatime #studybuddy",
-	},
-	{
-		id: "2",
-		title: "onosoahu",
-		image: "/Images/insta/2.gif",
-		url: "https://www.instagram.com/reel/DNFY5NROp1j/",
-		description: "🥥“Going COCO…”🥭  There’s a new dessert at one of my fave boba spots!😆 Sun Tea Mix in Kaka‘ako (near H Mart) is known for their drinks and fluffy soufflé pancakes—but they’re launching a new item this Friday, August 8 called Coco Mango🥥🥭 It’s like a coconut jelly with a silky tofu-like texture—lightly sweet from the coconut water and even better when you mix in the mango. I’m not even a big coconut fan and I loved it! There’s also a Classic Coco version without the mango if you prefer something simple! ✨ Launch Special: Get $2 off Coco Mango or Classic Coco from August 8–15 (preorders recommended!) And don’t forget to grab a drink while you’re there, like the…💛 Mango Charm – creamy, sweet & refreshing💖 Smoogurts – the Mango (my best friend’s pick!) and Strawberry (mine!) are both winners! 📍Parking in the H Mart or SALT lot—first hour free! Which one are you trying first: Coco Mango or Classic Coco?👇  Thank you @sunteamix808 for the invite!!🥹❤️  お気に入りのタピオカ屋さんに新しいデザートが登場！😆カカアコ（Hマートの近く）にあるサンティーミックス が、ドリンクやふわふわのスフレパンケーキで人気だけど8月8日（金） から新メニュー 「ココマンゴー」 が登場する🥥🥭 これはまるでココナッツゼリーと絹ごし豆腐のような食感で、ココナッツウォーターのほんのり甘さがあり、マンゴーを混ぜるとさらに美味しくなる！実は私、ココナッツはそんなに好きではないけどこれはハマった😍シンプル派の方には、マンゴーなしの 「クラシックココ」 もある！ ✨【発売記念スペシャル】8月8日～15日 の間、ココマンゴーまたは クラシックココが2ドルオフになる（事前予約おすすめ！） ついでに、ぜひドリンクもチェックしてみてね：💛 マンゴーチャーム： クリーミーで甘くて爽やか！💖 スムーグルトシリーズ ：マンゴー（親友のお気に入り）もストロベリー（私のお気に入り）もおすすめ！ 📍Hマートまたはソルトの駐車場が利用可能で、最初の1時間は無料🚗 どっちから食べてみたい？👇  ✨ Featured Items/紹介したアイテム✨  🥭Coco Mango/ココマンゴー, $8.99 (special price) 🥥Classic Coco/クラシックココ, $7.99 (special price) 🧋Mango Charm/ マンゴーチャーム, $7.99  📍Sun Tea Mix サンティーミックス  400 Keawe St Honolulu, HI 96813",
-	},
-	{
-		id: "3",
-		title: "sunteamix808",
-		image: "/Images/insta/3.gif",
-		url: "https://www.instagram.com/reel/DNFSD9ltxhX/",
-		description: "Introducing!! Coco Mango!!! We're launching it Tomorrow!! 8th of August  It's at a discounted price during the first week of Launch🤙!!! Stop by!!   COCO MANGO CHALLENGE  1) Try our new Coco Mango 2) Post a photo or video on your Story Or on your Feed (posting on feed will get you extra points!!!) 3) Tag us or send a collab request   Get a Chance to win $50 Gift Card +3 FREE Coco Mangos!!  Dates: Aug 8-15   The winner will be announced on Aug 16!!  Find the location of our store from the link in our bio!!",
-	},
-	{
-		id: "4",
-		title: "sunteamix808",
-		image: "/Images/insta/4.jpg",
-		url: "https://www.instagram.com/p/DMRqFkduaSP/",
-		description: "Summer Time☀️☀️  Can’t miss this Watermelon Smoothie topped with premium salted cheese foam 💯💯💯  #smoothie #kakaako #honolulu #boba #fruit #souffle #milktea #summervibes☀️   We located @ 400 Keawe Suite 107‼️‼️",
-	},
-	{
-		id: "5",
-		title: "keaweretail",
-		image: "/Images/insta/5.jpg",
-		url: "https://www.instagram.com/p/DF_djLQMMIx/",
-		description: "🧋 Sips that hit just right—@sunteamix808 has all the flavors to keep you refreshed and happy. Come find your favorite today! 💛✨  #KeaweRetail #SunTeaMix808 #SipHappiness #MilkTeaLovers #BobaTea #OahuEats #OurKakaako #HawaiiVibes",
-	},
-	{
-		id: "6",
-		title: "sunteamix808",
-		image: "/Images/insta/6.jpg",
-		url: "https://www.instagram.com/p/DBpt0nxvK-1/",
-		description: "Seasonal Special 🎃🎃🎃 100% real PUMPKIN 💯 Come try out our holiday special: Pumpkin Milk —— $7.29 Cinnamon Pumpkin Milkshakes —— $7.29  #boba #halloween #holiday #sunteamix808 #smoothie #kakaako #honolulufoodies #foodie #musthave",
-	},
-
+		{
+			id: "1",
+			title: "staceysawa",
+			image: "/Images/insta/1.jpg",
+			url: "https://www.instagram.com/p/DKYqF-PR-1p/",
+			description: "My favorite thing to do is to wander around looking for good food places I’ve never heard of and today I found a place I really like. #WaikikiChickeninParadise has no social media I can find and only the beginnings of a Yelp page but I happened to stumble upon it while I was getting my steps in in #Waikiki. They’re right off of Kuhio Avenue in the same area as Five Star Poke, about a block over from Hy’s Steakhouse towards the Zoo end of Kuhio. They’re right off were closed the first time I went by but I noticed this #friedchicken #locomoco on the menu so I knew I was coming back. After my 5 mile trek through the seas of tourists I made the return trip and thankfully they were open. I was super impressed when he handed me the plate. He left it partially open because it was filled and didn’t want to smash everything down. There’s tons of gravy, which I appreciate, a scoop of #macsalad, some #tossedgreens, and a ton of fried #chicken on a bed of rice with a perfectly cooked #egg on top. Old me would’ve questioned the need for the greens but current me appreciated having something healthy in there. I would 100% get this again though I kinda want to try the chicken sandwich next time. Might have to get both 🤔. Highly recommend checking them out. #hawaiifood #CraveHi #hitakesout #hawaiisbestkitchens #yelphawaii",
+		},
+		{
+			id: "2",
+			title: "rockstareater",
+			image: "/Images/insta/2.gif",
+			url: "https://www.instagram.com/reel/DND0lwIpy9E/",
+			description: "5 must-try food trucks in Honolulu @angryshrimphawaii @fivestarpoke @thaitacoswaikiki @waikikichickeninparadise located on Kapuni St and Kuhio Ave in Waikiki. Try Hawaiian street food in Waikiki at these 5 food stands. #foodreels #honolulu #waikiki #streetfood #foodtrucks #hawaiianfood",
+		},
+		{
+			id: "3",
+			title: "waikikichickeninparadise",
+			image: "/Images/insta/3.jpg",
+			url: "https://www.instagram.com/p/DNjvMdxIMZG/",
+			description: "Fried chicken loco moco- Waikīki comfort on a plate.🌺🍗 . . .  #WaikikiEats #waikiki #hawaiilife #friedchicken #HawaiiFoodie #foodtrailer",
+		},
+		{
+			id: "4",
+			title: "onfirehawaii",
+			image: "/Images/insta/4.gif",
+			url: "https://www.instagram.com/reel/DNq_5i-5L5V/",
+			description: "🚨BEST NEW FOOD TRUCKS IN WAIKIKI🌺 The perfect combo: when you no can decide where fo’ go… jus’ go both 🤤🔥  🍛 First stop → Chicken in Paradise: @waikikichickeninparadise da  🍗Chicken Loco Moco stay nuts. Juicy fried chicken  on rice, smothered in gravy, topped wit’ one runny egg = straight up comfort food heaven. Plus they have POG Slushie  🥪If my stomach was mo’ big, I woulda grabbed da Fried Chicken Sando too… Heard das one mean creation 🤯  🌮 Next stop, right Nextdoor → Thai Taco: @thaitacoswaikiki Had to sample the Taco Mix (3) 🥩 Thai grilled beef — smoky, juicy, buss’ yo’ tastebuds 🍢 Chicken satay — peanut sauce slap, no joke 🍗 Crispy chicken — crunch so loud, had tourists turn heads 😂  🧋Thai Iced tea  ✨ Waikiki grindz back-to-back… chicken plate AND tacos? Bruh, das da kine “why choose when you can cruise” combo 🤙  📍 2463 Kūhiō Ave, Waikiki (both trucks, same spot!) 👯‍♂️ Tag da crew fo’ this double mission — cheat day stay worth it.  #WaikikiGrinds #ChickenInParadise #ThaiTacoWaikiki #OnoKineEats #HNLFoodie #IslandVibes #foodtruckfinds @collabhawaii @thecoconutpages",
+		},
+		{
+			id: "5",
+			title: "waikikichickeninparadise",
+			image: "/Images/insta/5.gif",
+			url: "https://www.instagram.com/reel/DNwwlFrUAk-/",
+			description: "Loco moco, but make it crispy!!! . . . . #LocoMoco #Fried ChickenLocoMoco #WaikikiEats #WaikikiFood #WaikikiBeachEats #HonoluluEats #HonoluluFoodie #HawaiiFoodie #HawaiiEats #FriedChickenHawai #Chicken Sandwich #WaikikiChicken #ComfortFoodHawai #HawaiiFoodstagram #WaikikiSlushies #MacSaladAndFries #WaikikiRestaurants #HawaiiComfortFood #HonoluluRestaurants #LocalHawaiiEats #WaikikiFoodie #ChickenIn Paradise",
+		},
+		{
+			id: "6",
+			title: "thaitacoswaikiki",
+			image: "/Images/insta/6.jpg",
+			url: "https://www.instagram.com/p/DN19PfN2P5I/",
+			description: "Our Beloved Food Trailers~ . . . . . #ThaiTacosWaikiki #friedchickenhonolulu #friedchickenoahu #WaikikiEats #WaikikiFood #WaikikiFoodies #WaikikiBeach #WaikikiBeachEats #WaikikiBeachVibes #WaikikiLife #WaikikiVibes #Honolulu Eats #HonoluluFoodies #HonoluluHawai #HonoluluCatering #HawaiiEats #HawaiiFoodies #HawaiiFood #HawaiCatering #0ahuEats #oahufoodies #oahucatering #EatLocalHawai #SupportLocalHawai",
+		},
 	];
 
 	return <InstagramFeed posts={Posts} />;

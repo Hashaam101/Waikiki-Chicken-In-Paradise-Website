@@ -26,52 +26,42 @@ export default function Home_menu_section() {
   const popularItems : MenuItem[] = [
     {
       id: '1',
-      name: 'Coco Mango',
-      image: 'Images/ProductImg_CocoMango.webp',
-      price: 8.95,
+      name: 'Fried Chicken Loco Moco',
+      image: 'Images/ProductImg_FriedChickenLocoMoco.webp',
+      price: 1,
       loyaltyPoints: 0,
-      description: 'Creamy coconut jelly topped with fresh mango chunks — our signature summer special.',
-      tags: ['With Mango', 'Without Mango'],
+      description: 'Juicy fried chicken on rice with gravy — a must-try Hawaiian favorite',
+      tags: ['Chicken', 'Loco Moco', 'Sauce'],
       isFavorite: false,
     },
     {
       id: '2',
-      name: "Brown Sugar Soufflé Pancakes",
-      image: 'Images/ProductImg_BrownSugarSoufflePancakes.webp',
-      price: 12.95,
+      name: 'Fish & Chips',
+      image: 'Images/ProductImg_FishAndChips.webp',
+      price: 1,
       loyaltyPoints: 0,
-      description: 'Fluffy Japanese-style soufflé pancakes drizzled with brown sugar syrup & boba pearls.',
-      tags: ['Pancake', 'Boba Pearls', 'Dessert'],
+      description: 'Crispy fish and golden fries — a Honolulu classic',
+      tags: ['Fish', 'Fries'],
       isFavorite: false,
     },
     {
       id: '3',
-      name: 'Classic Milk Tea',
-      image: 'Images/ProductImg_ClassicMilkTea.webp',
-      price: 6.50,
+      name: 'Loaded Fries',
+      image: 'Images/ProductImg_LoadedFries.webp',
+      price: 1,
       loyaltyPoints: 0,
-      description: 'Smooth black tea with rich milk — the foundation of every great boba shop.',
-      tags: ['Tea'],
-      isFavorite: true,
-    },
-    {
-      id: '4',
-      name: 'Strawberry Soufflé Pancakes',
-      image: 'Images/ProductImg_StrawberrySoufflePancakes.webp',
-      price: 11.95,
-      loyaltyPoints: 0,
-      description: 'Light, airy pancakes topped with fresh strawberries & cream.',
-      tags: ['Strawberry', 'Pancakes'],
+      description: 'Golden fries with cheese, bacon, and our signature Hawaiian-flavored sauces',
+      tags: ['Fries', 'Cheese', 'Bacon', 'Sauce'],
       isFavorite: false,
     },
     {
-      id: '5',
-      name: 'Tropical Lava Flow',
-      image: 'Images/ProductImg_TropicalLavaFlow.webp',
-      price: 7.95,
+      id: '4',
+      name: 'Chicken Sandwich',
+      image: 'Images/ProductImg_ChickenSandwich.webp',
+      price: 1,
       loyaltyPoints: 0,
-      description: 'Refreshing fruit tea layered with strawberry, pineapple, and mango.',
-      tags: ['Fruit Tea', 'Strawberry', 'Pineapple', 'Mango'],
+      description: 'Freshly fried chicken, lettuce, and our Hawaiian-flavored sauce on a soft bun',
+      tags: ['Chicken', 'Soft Bun', 'Sauce'],
       isFavorite: false,
     },
   ];
@@ -100,14 +90,14 @@ export default function Home_menu_section() {
           className={`hidden sm:block absolute -bottom-60 -left-60 group-hover:-bottom-18 group-hover:-left-12 w-80 h-80 bg-black/10 rounded-full pointer-events-none transition-all duration-500 ease-in-out -z-0`}
       />
 			<div className='h-full flex px-[8px] py-[26px] flex-col z-10'>
-				<div className='text-h3 text-white text-start leading-[1.2]'>
-					Trending in
-					<br />
-					Honolulu
-				</div>
-				<div className='text-white/50 text-normal1 mt-[5px]'>
-					Boba • Bubble Tea • Soufflé Pancakes • Smoothies • Dessert Café
-				</div>
+    <div className='text-h3 text-white text-start leading-[1.2]'>
+      Best Sellers
+      <br />
+      Waikiki Chicken In Paradise
+    </div>
+    <div className='text-white/50 text-normal1 mt-[5px]'>
+      Fried Chicken Loco Moco • Fish & Chips • Loaded Fries • Chicken Sandwich
+    </div>
 
 				<div className='flex-1'/>
 				

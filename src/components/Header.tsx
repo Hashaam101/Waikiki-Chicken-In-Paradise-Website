@@ -46,17 +46,17 @@ function Header( {onClick} : {onClick: () => void}) {
       <div className={`w-full grid grid-cols-2 md:grid-cols-3 items-center`}>
         {/* Left Section */}
         <div className="hidden md:flex justify-start">
-            <AnimatedMenuButton
-                menuItems={[
-                    { name: "Home", onclick: () => { scrollToSection('Home') } },
-                    { name: "Menu", onclick: () => { scrollToSection('Menu') } },
-                    { name: "Reviews", onclick: () => { scrollToSection('Reviews') } },
-                    { name: "Our Story", onclick: () => { scrollToSection('Story') } },
-                    { name: "Featuring", onclick: () => { scrollToSection('Featuring') } },
-                    { name: "FAQ's", onclick: () => { scrollToSection("FAQ's") } },
-                    { name: "Location", onclick: () => { scrollToSection('Location') } }
-                ]}
-            />           
+      <AnimatedMenuButton
+        menuItems={[
+          { name: "Home", onclick: () => { scrollToSection('Home') } },
+          { name: "Menu", onclick: () => { scrollToSection('Menu') } },
+          { name: "Reviews", onclick: () => { scrollToSection('Reviews') } },
+          { name: "Our Story", onclick: () => { scrollToSection('Story') } },
+          { name: "Featuring", onclick: () => { scrollToSection('Featuring') } },
+          { name: "FAQ's", onclick: () => { scrollToSection("FAQ's") } },
+          { name: "Location", onclick: () => { scrollToSection('Location') } }
+        ]}
+      />           
         </div>
 
         {/* Center Section (Always Centered) */}
@@ -74,7 +74,7 @@ function Header( {onClick} : {onClick: () => void}) {
             />
             <Image
               src={logo}
-              alt="Sun Tea Mix Logo"
+              alt="Waikiki Chicken In Paradise Logo"
               width={70}
               height={70}
               className="object-cover rounded-full"

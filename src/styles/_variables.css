@@ -189,7 +189,7 @@
 
 /* Global colors - Dark mode */
 .dark {
-  --tt-bg-color: var(--black);
+  --tt-bg-color: #191919;
   --tt-border-color: var(--tt-gray-dark-a-200);
   --tt-border-color-tint: var(--tt-gray-dark-a-100);
   --tt-sidebar-bg-color: var(--tt-gray-dark-100);
@@ -228,15 +228,15 @@
 }
 
 .dark {
-  --tt-color-text-gray: hsl(0, 0%, 61%);
-  --tt-color-text-brown: hsl(18, 35%, 58%);
-  --tt-color-text-orange: hsl(25, 53%, 53%);
-  --tt-color-text-yellow: hsl(36, 54%, 55%);
-  --tt-color-text-green: hsl(145, 32%, 47%);
-  --tt-color-text-blue: hsl(202, 64%, 52%);
-  --tt-color-text-purple: hsl(270, 55%, 62%);
-  --tt-color-text-pink: hsl(329, 57%, 58%);
-  --tt-color-text-red: hsl(1, 69%, 60%);
+  --tt-color-text-gray: #e3e3e3;
+  --tt-color-text-brown: #e0c7b7;
+  --tt-color-text-orange: #ffd6a5;
+  --tt-color-text-yellow: #fff7ae;
+  --tt-color-text-green: #b7ffd6;
+  --tt-color-text-blue: #a5c8ff;
+  --tt-color-text-purple: #d1b3ff;
+  --tt-color-text-pink: #ffb3d1;
+  --tt-color-text-red: #ffb3b3;
 
   --tt-color-text-gray-contrast: hsla(0, 0%, 100%, 0.09);
   --tt-color-text-brown-contrast: hsla(17, 45%, 50%, 0.25);

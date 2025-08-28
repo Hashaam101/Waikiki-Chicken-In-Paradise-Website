@@ -78,13 +78,13 @@ export function AnimatedMenuButton({ menuItems }: AnimatedMenuButtonProps) {
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         <motion.div
-          className="w-[24px] h-[1.75px] bg-[#000] rounded-full"
+          className="w-[24px] h-[1.75px] rounded-full" style={{background: 'var(--tt-color-text-gray)'}}
           variants={topLineVariants}
           animate={isOpen ? "open" : "closed"}
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className="w-[24px] h-[1.75px] bg-[#000] rounded-full"
+          className="w-[24px] h-[1.75px] rounded-full" style={{background: 'var(--tt-color-text-gray)'}}
           variants={bottomLineVariants}
           animate={isOpen ? "open" : "closed"}
           transition={{ duration: 0.3 }}
@@ -101,7 +101,7 @@ export function AnimatedMenuButton({ menuItems }: AnimatedMenuButtonProps) {
         {menuItems.map((item, index) => (
           <motion.div
             key={index}
-            className="py-2 px-8 text-normal4 hover:bg-gray-100 cursor-pointer"
+            className="py-2 px-8 text-normal4 text-black hover:bg-gray-100 cursor-pointer"
             variants={menuItemVariants}
             onClick= {() => {item.onclick()}}
           >

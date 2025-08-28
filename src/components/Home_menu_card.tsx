@@ -153,13 +153,13 @@ const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsPro
             className="w-[300px] sm:w-[386px] text-black rounded-[12px] overflow-hidden flex-shrink-0"
           >
             {/* Card Image */}
-            <div className="relative h-[240px] w-full cursor-grab active:cursor-grabbing">
+            <div className="relative w-full cursor-grab active:cursor-grabbing" style={{ maxHeight: '239.99px', height: '239.99px' }}>
               {/* Preloader overlays the image until loaded, matching shape and fill */}
               <MediaPreloader
                 src={item.image}
                 alt={item.name}
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-[12px]"
-                style={{ borderRadius: '12px' }}
+                style={{ borderRadius: '12px', maxHeight: '239.99px', height: '239.99px' }}
               />
               <Image 
                 src={item.image}

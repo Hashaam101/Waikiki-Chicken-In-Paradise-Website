@@ -18,7 +18,7 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ buttonLeft,
       <div className="relative w-full max-w-lg h-full">
         {/* Left Button */}
         <motion.button
-          className="absolute h-full rounded-l-lg overflow-hidden flex items-center border-2 border-primary"
+          className="absolute h-full rounded-l-lg overflow-hidden flex items-center border-2 border-primary-dark"
           style={{ 
             originX: 1, 
             zIndex: hoveredButton === 'left' ? 0 : 5 
@@ -36,7 +36,7 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ buttonLeft,
           onClick={buttonLeft}
         >
           <div className="flex items-center justify-between w-full">
-						<motion.div className='overflow-hidden text-nowrap text-normal2 font-bold text-grey mx-auto'
+            <motion.div className='overflow-hidden text-nowrap text-normal2 font-semibold mx-auto' style={{ color: 'var(--tt-color-text-gray)' }}
 							animate={{
 								width: hoveredButton === 'right' ? "0%" : "100%",
 								borderTopLeftRadius: hoveredButton === 'left' ? "8px" : "0px",
@@ -52,7 +52,7 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ buttonLeft,
 
         {/* Right Button */}
         <motion.button
-          className="absolute h-full rounded-r-lg overflow-hidden flex items-center bg-primary "
+          className="absolute h-full rounded-r-lg overflow-hidden flex items-center bg-primary-dark "
           style={{ 
             originX: 0, 
             zIndex: hoveredButton === 'right' ? 10 : 5 

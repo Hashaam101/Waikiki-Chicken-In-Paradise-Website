@@ -56,7 +56,7 @@ const FAQ: React.FC<FAQSectionProps> = ({
                 openIndex === index ? 'max-h-96 py-[20px] border-t border-grey/50 bg-grey/5' : 'max-h-0'
               }`}
             >
-              <p className="text-grey text-normal3 pl-[10px]">{item.answer}</p>
+              <p className="text-[var(--tt-color-text-gray)] opacity-60 text-normal3 pl-[10px]">{item.answer}</p>
             </div>
           </div>
         ))}

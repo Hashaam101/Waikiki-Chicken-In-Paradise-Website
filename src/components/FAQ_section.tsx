@@ -4,48 +4,40 @@ const FAQSection = () => {
   // Sample FAQ data
   const faqItems = [
     {
-      question: "What areas do you serve?",
-      answer: "We serve Honolulu, Waikiki, and surrounding Oahu areas with takeaway and delivery."
+      question: "Where is Waikiki Chicken In Paradise located?",
+      answer: "Our food truck is conveniently situated near Waikiki Beach, offering easy access for beachgoers and tourists."
     },
     {
-      question: "Where are you located?",
-      answer: (
-        <span>
-          400 Keawe St, Honolulu, HI 96813 (<a href="https://maps.google.com/?q=400+Keawe+St,+Honolulu,+HI+96813" target="_blank" rel="noopener noreferrer" className="text-primary underline">View on Maps</a>)
-        </span>
-      )
+      question: "What are your operating hours?",
+      answer: "We are open daily from 11:00 AM to 9:00 PM, 7 days a week, serving delicious meals throughout the day."
     },
     {
-      question: "What are your opening hours?",
-      answer: "Mon–Sun: 11:00 AM – 9:00 PM"
+      question: "Is your food truck wheelchair accessible?",
+      answer: "Yes, our setup is designed to accommodate all guests, including those with mobility challenges."
     },
     {
-      question: "Do you offer takeaway or delivery services?",
-      answer: "Yes! Order via DoorDash, Postmates, or call in for pickup."
+      question: "Can I place an order for delivery?",
+      answer: "Nope, as of right now, we don't have delivery services."
     },
     {
-      question: "Is parking available nearby?",
-      answer: "Yes, complimentary parking is available for all SunTea Mix guests."
+      question: "Is parking available near your location?",
+      answer: "Yes, there are several parking options available nearby for our customers' convenience."
     },
     {
-      question: "Can I host small gatherings or study at SunTea Mix?",
-      answer: "Definitely — we’re a cozy spot with a welcoming atmosphere for friends, study sessions, or casual hangouts."
+      question: "Do you accept credit or debit cards?",
+      answer: "Yes, we accept all major credit and debit cards for your convenience."
     },
     {
-      question: "How long do soufflé pancakes take to make?",
-      answer: "They’re made fresh to order and usually take around 20 minutes. Worth the wait!"
+      question: "Are your ingredients locally sourced?",
+      answer: "We prioritize using locally sourced ingredients to support Hawaiian farmers and ensure the delivery of fresh, high-quality meals; however, some items are not locally sourced as well."
     },
     {
-      question: "Do you have gluten-free options?",
-      answer: "Yes, some of our drinks and desserts are gluten-free. Just ask our staff when ordering."
+      question: "Do you offer catering services for events?",
+      answer: "Contact us at +18434788609"
     },
     {
-      question: "Do you offer non-dairy or vegan options?",
-      answer: "Yes! Many of our drinks can be made with oat, almond, or soy milk. We also have fruit teas and desserts that are dairy-free."
-    },
-    {
-      question: "Are your drinks customizable?",
-      answer: "Absolutely — you can adjust sweetness, ice level, and toppings (boba, jelly, pudding, etc.)."
+      question: "Can I make a reservation?",
+      answer: "You can, Although you can just walk in as well, we welcome walk-ins and strive to serve all our guests promptly."
     }
   ];
 
