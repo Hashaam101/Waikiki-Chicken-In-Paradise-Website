@@ -1,6 +1,10 @@
-# Sun Tea Mix Website
+## Project Origin
 
-This site was built for the client **Sun Tea Mix** using TableTurnerr's Client Site Structure & Design. It is a modern, responsive web app built with Next.js and Tailwind CSS.
+This website was initially cloned from Sun Tea's site {which is based on TableTurnerr's Stack Website}, but it is now the official website for Waikiki Chicken In Paradise.
+
+# Waikiki Chicken In Paradise Website
+
+This site is now the official website for **Waikiki Chicken In Paradise**, a client of TableTurnerr. It is a modern, responsive web app built with Next.js and Tailwind CSS.
 
 ## Features & Sections
 
