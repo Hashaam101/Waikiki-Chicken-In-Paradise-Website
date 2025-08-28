@@ -23,7 +23,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                     />
                     <div className="flex h-[120px] justify-evenly gap-[10px] flex-col my-auto max-w-100">
                         <a
-                              href="https://www.instagram.com/sunteamix808/"
+                              href="https://www.instagram.com/waikikichickeninparadise/"
                               aria-label="Instagram"
                               className="min-w-[100px] p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
                               style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
@@ -63,7 +63,7 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                             </svg>
                         </a>
                         <a
-                              href="https://www.yelp.com/biz/sun-tea-mix-honolulu"
+                              href="https://www.yelp.com/biz/waikiki-chicken-in-paradise-honolulu"
                               aria-label="Yelp"
                               className="p-2 py-4 h-full w-full items-center justify-center flex rounded-lg group transition-all"
                               style={{ background: 'color-mix(in oklab, var(--color-white) 5%, transparent)' }}
@@ -96,10 +96,10 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
                                         +1 (843) 478-8609
                                     </a>
                                     <a
-                                        href="mailto:suntea808@gmail.com"
+                                        href="mailto:chickeninparadise96815@gmail.com"
                                         className="hover:text-primary hover:underline cursor-pointer transition-colors"
                                     >
-                                        suntea808@gmail.com
+                                        chickeninparadise96815@gmail.com
                                     </a>
                                 </div>
                             </div>

@@ -3,18 +3,15 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import MediaPreloader from "@/components/MediaPreloader";
 import Hero from "@/../public/Images/hero.webp";
 import ThemeButton from "@/components/ThemeBtn";
 import Home_menu_section from "@/components/Home_menu_section";
-import PromotionalBanner from "@/components/Home_promotional_banner";
 import InstagramComponent from "@/components/InstagramComponent";
 import Reviews from "@/components/Reviews";
 import FAQSection from "@/components/FAQ_section";
 import LocationComponent from "@/components/OurLocation";
 import Featuring from "@/components/featuring";
-import Logo from "@/assets/Images/Logo.webp";
 
 const Home = React.memo(function Home() {
   const [heroLoaded, setHeroLoaded] = React.useState(false);
@@ -98,7 +95,7 @@ const Home = React.memo(function Home() {
         <div className="mt-[20px] gap-[20px] flex flex-col sm:flex-row items-center justify-center">
           <ThemeButton
             text="Get Directions"
-            href="https://maps.app.goo.gl/bR4pAoTpwBCYqMzo9"
+            href="https://maps.app.goo.gl/zZErazVdPgZMqJLeA"
             textClassname="pr-[8px] pl-[14px] text-white"
             className="bg-primary-dark border-2 hover:bg-primary border-primary-dark hover:border-primary transition-colors"
           />
@@ -112,7 +109,7 @@ const Home = React.memo(function Home() {
             iconBgHoverColor="border-primary-dark"
             iconColor="text-white"
             iconHoverColor="text-white"
-            href="https://www.clover.com/online-ordering/sun-tea-mix-honolulu"
+            href="https://www.instagram.com/stories/highlights/17960692322826599/"
           />
 
         </div>

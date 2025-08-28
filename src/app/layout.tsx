@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
   description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
   keywords: [
-    "fried chicken", "waikiki chicken", "fish and chips", "food truck waikiki", "fast food waikiki", "best fried chicken honolulu", "crispy chicken sandwich", "loaded fries", "hawaiian flavors", "gluten free", "vegan friendly", "easy parking", "dine-in", "take away", "reservations", "waikiki beach", "honolulu food truck"
+    "fried chicken", "waikiki chicken", "fish and chips", "food truck waikiki", "Restaurant" , "fast food waikiki", "best fried chicken honolulu", "crispy chicken sandwich", "loaded fries", "hawaiian flavors", "dine-in", "take away", "reservations", "waikiki beach", "honolulu food truck"
   ],
   robots: {
     index: true,

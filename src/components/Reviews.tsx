@@ -84,7 +84,7 @@ const Reviews = () => {
                         iconBgHoverColor="bg-primary-dark/10"
                         iconColor="text-primary"
                         iconHoverColor="text-primary-dark"
-                        href="https://search.google.com/local/writereview?placeid=ChIJLQAAcsZvAHwR5iFKGJjPSmk"
+                        href="https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is"
                     />
                 </div>
 
