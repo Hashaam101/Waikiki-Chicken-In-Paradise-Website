@@ -16,14 +16,6 @@ import Featuring from "@/components/featuring";
 const Home = React.memo(function Home() {
   const [heroLoaded, setHeroLoaded] = React.useState(false);
 
-  // const videoSrc = `/vids/seasons.mp4`;
-  // let videoType: string | undefined;
-  // const extension = videoSrc.split('.').pop()?.toLowerCase();
-  // if (extension === 'mp4') videoType = 'video/mp4';
-  // else if (extension === 'webm') videoType = 'video/webm';
-  // else if (extension === 'ogv' || extension === 'ogg') videoType = 'video/ogg';
-
-
   React.useEffect(() => {
     // Simple analytics: log page load
     if (typeof window !== 'undefined') {
