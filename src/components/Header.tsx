@@ -48,10 +48,9 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className="hidden md:flex justify-start">
       <AnimatedMenuButton
         menuItems={[
-          { name: "Home", onclick: () => { scrollToSection('Home') } },
           { name: "Menu", onclick: () => { scrollToSection('Menu') } },
           { name: "Reviews", onclick: () => { scrollToSection('Reviews') } },
-          { name: "Our Story", onclick: () => { scrollToSection('Story') } },
+          // { name: "Our Story", onclick: () => { scrollToSection('Story') } },
           { name: "Featuring", onclick: () => { scrollToSection('Featuring') } },
           { name: "FAQ's", onclick: () => { scrollToSection("FAQ's") } },
           { name: "Location", onclick: () => { scrollToSection('Location') } }
