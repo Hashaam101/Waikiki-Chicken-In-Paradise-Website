@@ -6,7 +6,8 @@ import ThemeButton from './ThemeBtn';
 import ReviewPopup from './ReviewPopup';
 import { useState } from 'react';
 
-const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is";
+// Google review URL used in both Reviews and ReviewPopup
+export const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is";
 
 const Reviews = () => {
     const [showPopup, setShowPopup] = useState(false);

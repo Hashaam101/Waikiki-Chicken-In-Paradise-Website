@@ -13,6 +13,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [showGooglePrompt, setShowGooglePrompt] = useState(false);
   const [phone, setPhone] = useState('');
   const [feedbackError, setFeedbackError] = useState('');
   const [phoneError, setPhoneError] = useState('');
@@ -24,15 +25,10 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
     if (star < 4) {
       setShowFeedback(true);
     } else {
-      setSending(true);
+      setShowGooglePrompt(true);
       setTimeout(() => {
-        setSending(false);
-        setSent(true);
-        setTimeout(() => {
-          setSent(false);
-          setSubmitted(true);
-          onSubmit(star);
-        }, 1000);
+        window.open('https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is', '_blank');
+        onClose();
       }, 1800);
     }
   };
@@ -139,7 +135,12 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
       `}</style>
   <div className="bg-white rounded-xl py-8 px-6 w-full max-w-md shadow-lg relative flex flex-col justify-center">
   <button className="absolute top-4 right-4 text-gray-500 hover:text-black" style={{top: '1rem', right: '1rem'}} onClick={onClose}>&times;</button>
-        {sending ? (
+        {showGooglePrompt ? (
+          <div className="flex flex-col items-center justify-center min-h-[200px]">
+            <div className="text-lg font-bold mb-2 text-center text-primary-dark">Please give us a review on Google!</div>
+            <div className="text-gray-800 text-center mb-4">We appreciate your support. Redirecting you now...</div>
+          </div>
+        ) : sending ? (
           <div className="flex flex-col items-center justify-center min-h-[200px]">
             <div className="svg-container">
               <svg className="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100" viewBox="0 0 48 48" aria-hidden="true">

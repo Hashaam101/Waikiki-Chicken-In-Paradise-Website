@@ -6,10 +6,12 @@ This website was initially cloned from Sun Tea's site {which is based on TableTu
 
 This site is now the official website for **Waikiki Chicken In Paradise**, a client of TableTurnerr. It is a modern, responsive web app built with Next.js and Tailwind CSS.
 
+
 ## Features & Sections
 
 - **Animated Header & Navigation**: Smooth navigation with animated buttons and section scrolling.
 - **Menu & Reviews**: Interactive menu cards, drag-to-scroll, and customer reviews.
+- **Custom Review Popup**: Users can rate, leave feedback, and (optionally) provide a phone number. Reviews are validated (min 3 words, max 300, phone format) and submitted directly to a Google Sheet via a secure webhook. Multi-phase UI with sending/sent/confirmation states for a smooth experience. [View the live sheet here.](https://docs.google.com/spreadsheets/d/1AHVK5s7O1gm4Tg9zCI8e-NYa8dytvfta7jBKE3-HrwI/)
 - **FAQ & Story**: Dynamic FAQ section and brand story.
 - **Location & Contact**: Easy access to location info and call-to-action buttons.
 - **Instagram Feed**: Displays recent Instagram posts and reels in a grid or carousel layout.
