@@ -72,13 +72,9 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
 
     // If href is provided, render as an anchor tag (link)
     if (href) {
-        // Check if it's an external link
-        const isExternal = href.startsWith('http://') || href.startsWith('https://') || href.startsWith('//');
-        const linkTarget = isExternal ? target : undefined; // Only use target for external links usually
-        const linkRel = isExternal ? rel : undefined; // Only use rel for external links
-
+        // Always apply target and rel if provided, for both internal and external links
         return (
-            <a href={href} target={linkTarget} rel={linkRel}>
+            <a href={href} target={target} rel={rel}>
                 {buttonContent}
             </a>
         );

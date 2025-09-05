@@ -101,7 +101,9 @@ const Home = React.memo(function Home() {
             iconBgHoverColor="border-primary-dark"
             iconColor="text-white"
             iconHoverColor="text-white"
-            href="https://www.instagram.com/stories/highlights/17960692322826599/"
+            href="/Menu.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           />
 
         </div>

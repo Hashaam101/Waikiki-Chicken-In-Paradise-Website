@@ -40,7 +40,7 @@ export default function Home_menu_section() {
       image: 'Images/ProductImg_FishAndChips.webp',
       price: 17.95,
       loyaltyPoints: 0,
-      description: 'Crispy fish and golden fries — a Honolulu classic',
+  description: 'Crispy fish and golden fries, hot and fresh — a Honolulu classic...',
       tags: ['Fish', 'Fries'],
       isFavorite: false,
     },
@@ -51,7 +51,7 @@ export default function Home_menu_section() {
       price: 12.95,
       loyaltyPoints: 0,
       description: 'Golden fries with cheese, bacon, and our signature Hawaiian-flavored sauces',
-      tags: ['Cheese', 'Bacon', 'Sauce', 'Chicken +$3.95'],
+      tags: ['Cheese', 'Bacon', 'Sauce'],
       isFavorite: false,
     },
     {

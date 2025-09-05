@@ -3,8 +3,23 @@ import ReviewCard from './ReviewCard';
 // For BG Pattern
 // import pattern from "@/../public/Svgs/BG Pattern.svg";
 import ThemeButton from './ThemeBtn';
+import ReviewPopup from './ReviewPopup';
+import { useState } from 'react';
+
+const GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is";
 
 const Reviews = () => {
+    const [showPopup, setShowPopup] = useState(false);
+
+    // Handles rating and feedback logic
+    const handleReviewSubmit = (rating: number, feedback?: string) => {
+        // Do not close the popup here; let ReviewPopup handle it after showing confirmation
+        if (rating >= 4) {
+            // Redirect to Google review page (cannot pre-select stars due to Google limitations)
+            window.open(GOOGLE_REVIEW_URL, '_blank');
+        }
+    };
+
     return (
         <div className="relative"
             style={{
@@ -84,9 +99,15 @@ const Reviews = () => {
                         iconBgHoverColor="bg-primary-dark/10"
                         iconColor="text-primary"
                         iconHoverColor="text-primary-dark"
-                        href="https://search.google.com/local/writereview?placeid=ChIJCeDZi7pzAHwR2-opn5R1-Is"
+                        onClick={() => setShowPopup(true)}
                     />
                 </div>
+                {showPopup && (
+                    <ReviewPopup
+                        onClose={() => setShowPopup(false)}
+                        onSubmit={handleReviewSubmit}
+                    />
+                )}
 
             </div>
         </div>

@@ -21,7 +21,7 @@ const FAQSection = () => {
     },
     {
       question: "Is parking available near your location?",
-      answer: "Yes, there are several parking options available nearby for our customers' convenience."
+      answer: "Plenty of paid parking spots available, but we recommend walking and enjoying the beautiful Hawaiian sun on your way to see us!"
     },
     {
       question: "Do you accept credit or debit cards?",
@@ -29,7 +29,7 @@ const FAQSection = () => {
     },
     {
       question: "Are your ingredients locally sourced?",
-      answer: "We prioritize using locally sourced ingredients to support Hawaiian farmers and ensure the delivery of fresh, high-quality meals; however, some items are not locally sourced as well."
+      answer: "We source as many ingredients as possible from the local Hawaiian community."
     },
     {
       question: "Do you offer catering services for events?",
