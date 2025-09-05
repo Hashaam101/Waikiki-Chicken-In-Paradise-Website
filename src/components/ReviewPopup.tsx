@@ -227,7 +227,7 @@ const ReviewPopup: React.FC<ReviewPopupProps> = ({ onClose, onSubmit }) => {
               maxLength={20}
             />
             {phoneError && <div className="text-xs text-red-600 mb-1">{phoneError}</div>}
-            <div className="mb-2 text-center text-sm text-gray-700">You can also call us at <a href="tel:843-478-8609" className="text-primary-dark font-bold">808-123-4567</a></div>
+            <div className="mb-2 text-center text-sm text-gray-700">You can also call us at <a href="tel:843-478-8609" className="text-primary-dark font-bold">843-478-8609</a></div>
             <button
               className="bg-primary-dark text-white px-4 py-2 rounded hover:bg-primary w-full"
               onClick={handleFeedbackSubmit}
