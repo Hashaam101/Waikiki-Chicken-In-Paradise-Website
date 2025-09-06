@@ -1,11 +1,8 @@
-// app/layout.tsx (Server Component - NO "use client")
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TabTitleHandler from "@/components/TabTitleHandler";
 import Script from 'next/script';
-// import ClientLayout from "@/components/ClientLayout"; // Import the new client wrapper
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +16,7 @@ const geistMono = Geist_Mono({
 
 // --- METADATA STAYS HERE ---
 export const metadata: Metadata = {
+  metadataBase: new URL("https://waikikichickeninparadise.com"),
   title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
   description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
   keywords: [
@@ -74,11 +72,6 @@ export default function RootLayout({
         <TabTitleHandler />
 
         {children}
-        {/* <ClientLayout>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-        </ClientLayout> */}
 
 
         {gaMeasurementId && (

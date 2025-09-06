@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+  "dev": "next dev",
+  "build": "next build",
+  "postbuild": "next export && node ./scripts/fix-out.js",
+  "start": "next start",
+  "lint": "next lint",
+  "export": "next export && node ./scripts/fix-out.js",
+  "fix-out": "node ./scripts/fix-out.js",
+  "serve-out": "npx serve out"
   },
   "dependencies": {
     

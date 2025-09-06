@@ -6,63 +6,11 @@ import Image from 'next/image';
 
 import arrow from '@/../public/Svgs/Arrow.svg';
 import ScrollableMenuCards, { ScrollableMenuRef } from './Home_menu_card';
-
-
-export interface MenuItem {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  loyaltyPoints: number;
-  description: string;
-  tags: string[];
-  isFavorite?: boolean;
-}
+import { products } from '@/data/products';
 
 export default function Home_menu_section() {
-	
-  const popularItems : MenuItem[] = [
-    {
-      id: '1',
-      name: 'Fried Chicken Loco Moco',
-      image: 'Images/ProductImg_FriedChickenLocoMoco.webp',
-      price: 19.95,
-      loyaltyPoints: 0,
-      description: 'Juicy fried chicken on rice with gravy — a must-try Hawaiian favorite',
-      tags: ['Chicken', 'Loco Moco', 'Sauce'],
-      isFavorite: false,
-    },
-    {
-      id: '2',
-      name: 'Fish & Chips',
-      image: 'Images/ProductImg_FishAndChips.webp',
-      price: 17.95,
-      loyaltyPoints: 0,
-  description: 'Crispy fish and golden fries, hot and fresh — a Honolulu classic...',
-      tags: ['Fish', 'Fries'],
-      isFavorite: false,
-    },
-    {
-      id: '3',
-      name: 'Loaded Fries',
-      image: 'Images/ProductImg_LoadedFries.webp',
-      price: 12.95,
-      loyaltyPoints: 0,
-      description: 'Golden fries with cheese, bacon, and our signature Hawaiian-flavored sauces',
-      tags: ['Cheese', 'Bacon', 'Sauce'],
-      isFavorite: false,
-    },
-    {
-      id: '4',
-      name: 'Chicken Sandwich',
-      image: 'Images/ProductImg_ChickenSandwich.webp',
-      price: 17.95,
-      loyaltyPoints: 0,
-      description: 'Freshly fried chicken, lettuce, and our Hawaiian-flavored sauce on a soft bun',
-      tags: ['Chicken', 'Soft Bun', 'Sauce'],
-      isFavorite: false,
-    },
-  ];
+	// Pull a subset of products for the homepage
+  const popularItems = products.filter(p => p.showOnHomepage);
 
 
   const scrollableMenuRef = useRef<ScrollableMenuRef>(null);
@@ -129,60 +77,4 @@ export default function Home_menu_section() {
 )
 }
 
-interface LocalScrollableMenuCardsProps {
-  menuItems: MenuItem[];
-  [key: string]: any;
-}
-
-const LocalScrollableMenuCards = ({ menuItems, ...props }: LocalScrollableMenuCardsProps) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    isDragging.current = true;
-    startX.current = e.pageX - (scrollContainerRef.current?.getBoundingClientRect().left || 0);
-    scrollLeft.current = scrollContainerRef.current?.scrollLeft || 0;
-    document.body.style.userSelect = "none";
-  };
-
-  const handleMouseLeave = () => {
-    isDragging.current = false;
-    document.body.style.userSelect = "";
-  };
-
-  const handleMouseUp = () => {
-    isDragging.current = false;
-    document.body.style.userSelect = "";
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging.current) return;
-    e.preventDefault();
-    const x = e.pageX - (scrollContainerRef.current?.getBoundingClientRect().left || 0);
-    const walk = (x - startX.current) * 1; // scroll speed
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft = scrollLeft.current - walk;
-    }
-  };
-
-  return (
-    <div
-      ref={scrollContainerRef}
-      className="flex overflow-x-auto gap-4 scrollbar-hide cursor-grab active:cursor-grabbing"
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-    >
-      {/* Render your menu items here */}
-      {menuItems.map(item => (
-        <div key={item.id} className="min-w-[200px]">{item.name}</div>
-      ))}
-    </div>
-  );
-};
-
-// Remove the export default for the local component
+// Removed unused local component to reduce duplication

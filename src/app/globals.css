@@ -99,3 +99,70 @@
     cursor: url('/Cursor/Squad%20Busters%20Chicken%20Animated--pointer--SweezyCursors..cur'), pointer !important;
   }
 }
+
+/* Custom thin rounded scrollbar for desktop to match mobile look */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255,255,255,0.45) transparent; /* Firefox thumb color, track transparent */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.45);
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0.15);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.65);
+}
+
+/* Mobile-specific: show horizontal thumbnail scrollbar on the left and make it more visible */
+@media (max-width: 640px) {
+  /* left-side scrollbar helper - apply this only to horizontal thumbnail strips */
+  .custom-scrollbar-left {
+    direction: rtl;
+    scrollbar-color: rgba(255,255,255,0.45) rgba(255,255,255,0.12);
+  }
+  /* restore normal text/layout direction for child elements so content doesn't flip */
+  .custom-scrollbar-left > * {
+    direction: ltr;
+  }
+  .custom-scrollbar-left::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: rgba(255,255,255,0.12);
+  }
+  .custom-scrollbar-left::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.12);
+  }
+  .custom-scrollbar-left::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.45);
+    border-radius: 999px;
+    border: 2px solid rgba(0,0,0,0.06);
+  }
+  /* vertical left scrollbar helper for overlays */
+  .custom-scrollbar-left-vertical {
+    direction: rtl;
+    scrollbar-color: rgba(255,255,255,0.45) rgba(255,255,255,0.12);
+  }
+  .custom-scrollbar-left-vertical > * {
+    direction: ltr;
+  }
+  .custom-scrollbar-left-vertical::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(255,255,255,0.12);
+  }
+  .custom-scrollbar-left-vertical::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.12);
+  }
+  .custom-scrollbar-left-vertical::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.45);
+    border-radius: 999px;
+    border: 2px solid rgba(0,0,0,0.06);
+  }
+}

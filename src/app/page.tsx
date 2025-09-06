@@ -39,8 +39,8 @@ const Home = React.memo(function Home() {
 
       <div className="sm:h-[20px]" />
 
-      {/* hero img section */}
-      <div id="Home" className="h-[550px] sm:h-[500px] w-full overflow-hidden rounded-[36px] relative">
+  {/* hero img section */}
+  <div id="Home" className="h-[550px] sm:h-[500px] w-full overflow-hidden rounded-[36px] relative">
         <div className="px-[20px] pb-8 sm:px-[40px] h-full flex flex-col items-start justify-end gap-2.5 bg-black/55 backdrop-blur-[13px]">
           <div className="text-[var(--tt-color-text-gray)] opacity-80 text-normal1 sm:text-normal2 sm:font-bold border-l-3 border-primary-dark pl-[20px]">
             Serving the Best Fried Chicken in Waikiki
@@ -93,7 +93,7 @@ const Home = React.memo(function Home() {
           />
 
           <ThemeButton
-            text="Our Menu"
+            text="Order Online"
             textClassname="pr-[8px] pl-[14px]"
             textColor="text-[var(--tt-color-text-gray)]"
             className="bg-transparent border-2 transition-all duration-200 hover:bg-primary-dark hover:text-white border-white/10 hover:border-primary-dark"
@@ -101,10 +101,9 @@ const Home = React.memo(function Home() {
             iconBgHoverColor="border-primary-dark"
             iconColor="text-white"
             iconHoverColor="text-white"
-            href="/Menu.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/menu"
           />
+
 
         </div>
       </div>

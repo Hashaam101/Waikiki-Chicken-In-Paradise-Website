@@ -4,8 +4,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { on } from 'events';
-import { i } from 'framer-motion/client';
 
 interface MenuItem {
   name: string;

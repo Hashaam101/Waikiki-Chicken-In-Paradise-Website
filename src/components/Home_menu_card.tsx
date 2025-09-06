@@ -3,7 +3,7 @@ import Image from 'next/image';
 import MediaPreloader from './MediaPreloader';
 
 import placeholderImg from "@/../public/Images/menu.png";
-import { MenuItem } from './Home_menu_section';
+import type { Product as MenuItem } from '@/data/products';
 
 export interface ScrollableMenuRef {
   scrollNext: () => void;

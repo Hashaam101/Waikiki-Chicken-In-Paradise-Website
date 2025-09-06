@@ -48,9 +48,8 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className="hidden md:flex justify-start">
       <AnimatedMenuButton
         menuItems={[
-          { name: "Menu", onclick: () => { scrollToSection('Menu') } },
+          { name: "Menu", onclick: () => { window.location.pathname = "/menu"; } },
           { name: "Reviews", onclick: () => { scrollToSection('Reviews') } },
-          // { name: "Our Story", onclick: () => { scrollToSection('Story') } },
           { name: "Featuring", onclick: () => { scrollToSection('Featuring') } },
           { name: "FAQ's", onclick: () => { scrollToSection("FAQ's") } },
           { name: "Location", onclick: () => { scrollToSection('Location') } }
@@ -86,7 +85,7 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className="flex justify-end w-full">
             <AnimatedCTAButton 
               buttonLeft={() => { router.push("tel:+1(843)-478-8609") }}
-              buttonRight={() => { window.open("https://www.instagram.com/waikikichickeninparadise/", "_blank") }}
+              buttonRight={() => { window.open("/menu", "_blank") }}
             />
         </div>
       </div>
