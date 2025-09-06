@@ -12,32 +12,34 @@ function Header( {onClick} : {onClick: () => void}) {
   const router = useRouter();
   const pathname = usePathname(); 
 
-    const scrollToSection = (sectionId: string) => {
-        if (pathname === '/') {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                console.warn(`Scroll target not found on home page: #${sectionId}`);
-
-            }
-        } else {
-            router.push('/');
-            const handleScroll = () => {
-              const section = document.getElementById(sectionId);
-              if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              } else {
-                console.warn(`Scroll target not found on home page: #${sectionId}`);
-              }
-              window.removeEventListener('DOMContentLoaded', handleScroll);
-            };
-            window.addEventListener('DOMContentLoaded', handleScroll);
-            if (typeof onClick === 'function') {
-              onClick();
-            }
-        }
+  const scrollToSection = (sectionId: string) => {
+    const attemptScroll = () => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.warn(`Scroll target not found on home page: #${sectionId}`);
+      }
     };
+
+    if (pathname === '/') {
+      attemptScroll();
+    } else {
+      // Call router.push and use a short timeout to attempt scroll after navigation.
+      // Router.push may not return a promise in all runtimes, so avoid chaining .then()
+      try {
+        router.push('/');
+      } catch (e) {
+        // push may throw in some environments; log and continue
+        // eslint-disable-next-line no-console
+        console.warn('router.push failed:', e);
+      }
+      setTimeout(attemptScroll, 100);
+      if (typeof onClick === 'function') {
+        onClick();
+      }
+    }
+  };
 
 
   return (
@@ -48,7 +50,7 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className="hidden md:flex justify-start">
       <AnimatedMenuButton
         menuItems={[
-          { name: "Menu", onclick: () => { window.location.pathname = "/menu"; } },
+          { name: "Menu", onclick: () => { router.push('/menu'); } },
           { name: "Reviews", onclick: () => { scrollToSection('Reviews') } },
           { name: "Featuring", onclick: () => { scrollToSection('Featuring') } },
           { name: "FAQ's", onclick: () => { scrollToSection("FAQ's") } },
@@ -61,7 +63,7 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className={`flex justify-start md:justify-center`}>
             <div
             className="relative text-white cursor-pointer"
-            onClick={() => { window.location.pathname = "/"; }}
+            onClick={() => { router.push('/'); }}
             >
             <span
               className="absolute inset-0 rounded-full border-[0.5px]"

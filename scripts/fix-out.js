@@ -20,11 +20,24 @@ function walk(dir, cb) {
 function fixHtml(filePath) {
   if (!filePath.endsWith('.html')) return;
   let s = fs.readFileSync(filePath, 'utf8');
-  // Replace href/src starting with /_next/ or /Images/ or leading /menu with relative paths
-  // Only rewrite internal absolute URLs that begin with '/'
-  s = s.replace(/(href=|src=)"\//g, `$1"./`);
-  // Also fix occurrences like href='/menu' or src='/Images/...'
-  s = s.replace(/(href=|src=)'\//g, `$1'./`);
+  // Compute how deep this file is relative to outDir so we can build a correct prefix.
+  // For example, out/menu/index.html -> prefix = ../
+  const rel = path.relative(outDir, filePath);
+  const dir = path.dirname(rel);
+  let prefix = './';
+  if (dir && dir !== '.') {
+    const parts = dir.split(path.sep).filter(Boolean);
+    prefix = parts.map(() => '..').join('/') + '/';
+  }
+
+  // Replace href= or src= attributes that start with "/" (but not with "//")
+  s = s.replace(/(href=|src=)"\/(?!\/)"?/g, `$1"${prefix}`);
+  s = s.replace(/(href=|src=)'\/(?!\/)'?/g, `$1'${prefix}`);
+
+  // Replace url('/...') or url("/...") or url(/...)
+  s = s.replace(/url\((['"]?)\/(?!\/)([^)'"]*)\1\)/g, (m, q, rest) => {
+    return `url(${q}${prefix}${rest}${q})`;
+  });
   fs.writeFileSync(filePath, s, 'utf8');
 }
 
