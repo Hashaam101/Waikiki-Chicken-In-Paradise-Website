@@ -5,10 +5,10 @@
   "scripts": {
   "dev": "next dev",
   "build": "next build",
-  "postbuild": "next export && node ./scripts/fix-out.js",
+  "postbuild": "node ./scripts/fix-out.js",
   "start": "next start",
   "lint": "next lint",
-  "export": "next export && node ./scripts/fix-out.js",
+  "export": "npm run build",
   "fix-out": "node ./scripts/fix-out.js",
   "serve-out": "npx serve out"
   },
