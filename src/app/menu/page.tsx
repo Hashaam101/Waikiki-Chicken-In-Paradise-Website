@@ -124,7 +124,7 @@ const MenuPage = React.memo(function MenuPage() {
     }
 
   const appUrl = `instagram://user?username=${IG_USERNAME}`;
-  const webProfile = `https://www.instagram.com/${IG_USERNAME}/`;
+  const webProfile = `https://www.instagram.com/direct/t/17842671456557448/`;
 
   const ua = typeof navigator !== 'undefined' ? (navigator as any).userAgent || '' : '';
   const isUADataMobile = typeof navigator !== 'undefined' && (navigator as any).userAgentData && (navigator as any).userAgentData.mobile === true;
