@@ -1,6 +1,5 @@
 "use client";
 
-import { div } from 'framer-motion/client';
 import { useCallback, useRef, useState } from 'react'
 
 import Image from 'next/image';
@@ -8,7 +7,6 @@ import Image from 'next/image';
 import arrow from '@/../public/Svgs/Arrow.svg';
 import ScrollableMenuCards, { ScrollableMenuRef } from './Home_menu_card';
 
-import placeholderImg from "@/../public/Images/Product img 1.png";
 
 export interface MenuItem {
   id: string;

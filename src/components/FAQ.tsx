@@ -24,8 +24,11 @@ const FAQ: React.FC<FAQSectionProps> = ({
   };
 
   return (
-    <div className="w-full px-[20px] md:px-[70px] py-8 ">
-      <h2 className="text-h4 text-center font-medium sm:font-normal sm:text-left sm:text-h2 mb-[32px]">{title}</h2>
+    <div className="w-full px-[20px] md:px-[70px] py-0 ">
+  <h2 className="text-h2 mb-[32px] sm:text-left text-center">
+    <span className="sm:hidden">FAQs</span>
+    <span className="hidden sm:inline">Frequently Asked Questions</span>
+  </h2>
       
       <div className="space-y-[10px]">
         {faqItems.map((item, index) => (

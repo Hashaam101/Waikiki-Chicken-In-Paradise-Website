@@ -18,7 +18,7 @@ interface InstagramGridProps {
 }
 
 const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
-	const [slideHeight, setSlideHeight] = useState<number>(400);
+	const [slideHeight, setSlideHeight] = useState<number>(340);
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const sliderRef = useRef<Slider>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -26,14 +26,14 @@ const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
 	const observerRef = useRef<IntersectionObserver | null>(null);
 
 	const calculateSlideHeight = useCallback((containerWidth: number) => {
-		let newSlideHeight = 400;
+		let newSlideHeight = 340;
 
 		if (containerWidth < 480) {
-			newSlideHeight = containerWidth;
+			newSlideHeight = containerWidth * 0.95;
 		} else if (containerWidth < 768) {
-			newSlideHeight = containerWidth * 0.8;
+			newSlideHeight = containerWidth * 0.7;
 		} else {
-			newSlideHeight = 400;
+			newSlideHeight = 340;
 		}
 		setSlideHeight(newSlideHeight);
 	}, []);
@@ -152,7 +152,7 @@ const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
 						style={{
 							display: "flex",
 							justifyContent: "center",
-							// height: `${slideHeight}px`,
+							height: `${slideHeight}px`,
 							alignItems: "center",
 						}}
 					>
@@ -164,7 +164,7 @@ const InstagramCarousel: React.FC<InstagramGridProps> = ({ posts }) => {
 							}}
 							className="instagram-embed-container flex justify-center items-center"
 						>
-							<InstagramPostCard post={post} />
+							<InstagramPostCard post={post} height={slideHeight} />
 						</div>
 					</div>
 				))}
@@ -272,44 +272,49 @@ const InstagramPostCard: React.FC<{ post: InstagramPost; height?: number }> = ({
 	if (!post.image) return null;
 
 	return (
-		<div
-			className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white border border-gray-300"
-			onClick={() => window.open(post.url, "_blank")}
-			style={{
-				maxWidth: "75vw",
-				minWidth: "200px",
-				height: height ? `${height}px` : "320px",
-			}}
-		>
-			{/* Image Container */}
-			<div className="relative overflow-hidden">
-						<div style={{height: height ? `${height * 0.6}px` : "192px"}}>
-							<MediaPreloader
-								src={post.image}
-								alt={post.title}
-								borderRadius="0.5rem"
-								className="w-full h-full object-cover"
-							/>
-						</div>
-			</div>
-
-			{/* Content Container */}
-			<div className="px-4 text-black z-30 w-full bg-white bg-opacity-90 py-2">
-				<div className="leading-tight w-full flex justify-between items-center">
-							{post.title ? (
-								<span className="text-lg font-medium">{post.title}</span>
-							) : (
-								<span className="inline-block bg-gray-300 rounded w-24 h-5 animate-pulse" />
-							)}
-					<InstagramIcon />
-				</div>
-
-						{post.description ? (
-							<PostDescription description={post.description} />
-						) : (
-							<span className="block bg-gray-200 rounded w-full h-4 animate-pulse mb-2" />
-						)}
-			</div>
-		</div>
+		   <div
+			   className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white border border-gray-500"
+			   onClick={() => window.open(post.url, "_blank")}
+			   style={{
+				   maxWidth: "420px",
+				   minWidth: "260px",
+				   width: "100%",
+				   height: height ? `${height}px` : "320px",
+			   }}
+		   >
+			   {/* Image Container */}
+			   <div className="relative overflow-hidden w-full h-full">
+				   <MediaPreloader
+					   src={post.image}
+					   alt={post.title}
+					   borderRadius="0.5rem"
+					   className="w-full h-full object-cover"
+				   />
+				   {/* Overlay Content */}
+				   <div
+					   className="absolute bottom-0 left-0 right-0 z-30 px-3 py-2"
+					   style={{
+						   background: "linear-gradient(0deg, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.2) 100%, rgba(0,0,0,0) 100%)",
+						   color: "#fff",
+					   }}
+				   >
+					   <div className="flex justify-between items-center w-full mb-1">
+						   {post.title ? (
+							   <span className="text-base font-bold truncate pr-2">{post.title}</span>
+						   ) : (
+							   <span className="inline-block bg-gray-300 rounded w-24 h-5 animate-pulse" />
+						   )}
+						   <InstagramIcon />
+					   </div>
+					   {post.description ? (
+						   <div className="text-xs leading-tight line-clamp-2">
+							   <PostDescription description={post.description} />
+						   </div>
+					   ) : (
+						   <span className="block bg-gray-400 rounded w-full animate-pulse" />
+					   )}
+				   </div>
+			   </div>
+		   </div>
 	);
 };

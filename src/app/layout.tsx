@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Waikiki Chicken In Paradise | Best Fried Chicken Waikiki Beach",
     description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
-    url: "https://waikiki-chicken-paradise.vercel.app/",
+    url: "https://waikikichickeninparadise.com/",
     siteName: "Waikiki Chicken In Paradise",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://waikiki-chicken-paradise.vercel.app/",
+    site: "https://waikikichickeninparadise.com/",
     title: "Waikiki Chicken In Paradise | Fried Chicken | Fish & Chips | Fast Food | Food Truck Waikiki",
     description: "Serving the Best Fried Chicken in Waikiki. Fresh, juicy chicken and island flavors just steps from Waikiki Beach! Try our most popular items and see why everyone in Honolulu is talking about us.",
     images: ["/Images/Logo.webp"]
@@ -60,7 +60,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const gaMeasurementId = 'G-E7K6Z23GXM';
 
 
   return (

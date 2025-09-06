@@ -105,17 +105,6 @@ const ScrollableMenuCards = forwardRef<ScrollableMenuRef, ScrollableMenuCardsPro
 
   return (
     <div className="w-full bg-primary-dark text-white px-2 sm:px-6 pt-3 pb-0">
-      {/* Header Section
-      <div className="mb-6">
-        <h2 className="text-heading-4 font-bold">{title}</h2>
-        {subtitle && <p className="text-normal-2 mt-1 opacity-80">{subtitle}</p>}
-        <div className="flex items-center mt-4">
-          <p className="text-normal-3">Scroll through to explore our dishes.</p>
-          <svg className="ml-2 w-6 h-6" viewBox="0 0 24 24" fill="none">
-            <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </div> */}
 
       {/* Scrollable Cards Section */}
       <div

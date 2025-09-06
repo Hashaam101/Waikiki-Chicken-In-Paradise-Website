@@ -123,21 +123,6 @@ const Home = React.memo(function Home() {
       {/* Instagram Section */}
       <InstagramComponent />
 
-
-      {/* promotion banner */}
-      {/* <div>
-        <PromotionalBanner
-          image="Product img 2.png"
-          title="Order From Our Website"
-          description="Order directly from our website to save money in fees, get faster service, earn free food via our rewards program, and support local business."
-          buttonText="Order Now"
-          buttonUrl="/order"
-        />
-      </div>
-
-      <div className="h-[100px]" /> */}
-
-
       {/* reviews */}
       <div className="h-[100px]" />
       <div id="Reviews">

@@ -38,7 +38,7 @@ const FeaturedDishSection: React.FC<FeaturedDishSectionProps> = ({
       variants={sectionVariants}
     >
       <div className={`mx-auto w-full max-w-[1240px] flex flex-col lg:flex-row lg:justify-between items-center gap-8 lg:gap-0${reverse ? ' lg:flex-row-reverse' : ''}`}>
-        <div className={`relative aspect-square max-w-[540px] max-h-[540px] block w-[60%] h-auto lg:w-[400px] lg:h-[400px] xl:w-[540px] xl:h-[540px] shrink-0 rounded-[24px] object-cover ${imageClass}`}>
+        <div className={`relative aspect-square max-w-[540px] max-h-[540px] block w-[90%] h-auto lg:w-[400px] lg:h-[400px] xl:w-[540px] xl:h-[540px] shrink-0 rounded-[24px] object-cover ${imageClass}`}>
           <MediaPreloader
             src={imageSrc}
             alt={alt}
@@ -52,8 +52,8 @@ const FeaturedDishSection: React.FC<FeaturedDishSectionProps> = ({
             className="w-full h-full object-cover rounded-[24px]"
           />
         </div>
-        <div className={`flex w-full lg:w-fit max-w-[560px] flex-col items-center lg:items-start gap-[10px] md:gap-[20px] mt-8 lg:mt-0 lg:pl-8 ${textClass}`}>
-          <div className="self-stretch text-h3 xl:text-h2 text-[var(--tt-color-text-gray)] text-center lg:text-left">
+        <div className={`flex w-full lg:w-fit max-w-[560px] flex-col items-center lg:items-start gap-0 md:gap-[20px] mt-0 lg:mt-0 mb-6 lg:mb-0 lg:pl-8 ${textClass}`}>
+          <div className="self-stretch text-h3 xl:text-h2 text-[var(--tt-color-text-gray)] text-center lg:text-left mb-0 -mt-2">
             {title}
           </div>
           <div className="text-normal4 md:text-normal3 text-[var(--tt-color-text-gray)] opacity-80 text-center lg:text-left">
@@ -163,7 +163,7 @@ function Featuring() {
         </div>
       </motion.div>
 
-      <div className="h-[100px]" />
+      <div className="h-[100px] mb-6 lg:mb-0" />
       <div className='text-center text-h2 text-[var(--tt-color-text-gray)] mb-12 md:mb-[80px]'>
         <div className=''>Best Fried Chicken Honolulu & Waikiki Beach</div>
         <div className='text-normal2 sm:text-h5 mt-1 mx-2x'>Juicy fried chicken and fish & chips made fresh daily — a fast food favorite near you!</div>
@@ -171,7 +171,7 @@ function Featuring() {
 
       {/* Featured Dishes */}
       <FeaturedDishSection
-        imageSrc="/Images/featuring/1.webp"
+        imageSrc="/Images/ProductImg_ChickenSandwich.webp"
         alt="Chicken Sandwich"
         title="Chicken Sandwich"
         description="Crispy chicken with Hawaiian-flavored sauce — perfect for a quick bite in Waikiki! Served with delicious fries and mac salad on the side."
@@ -179,7 +179,7 @@ function Featuring() {
       />
 
       <FeaturedDishSection
-        imageSrc="/Images/featuring/2.webp"
+        imageSrc="/Images/ProductImg_FishAndChips.webp"
         alt="Fish & Chips"
         title="Fish & Chips"
         description="Crispy fish, golden fries, fresh lemon — classic fast food in Honolulu. Served with mac salad and Tartar Sauce."
@@ -188,7 +188,7 @@ function Featuring() {
       />
 
       <FeaturedDishSection
-        imageSrc="/Images/featuring/3.webp"
+        imageSrc="/Images/ProductImg_FriedChickenLocoMoco.webp"
         alt="Fried Chicken Loco Moco"
         title="Fried Chicken Loco Moco"
         description="Crispy fried chicken and a savory beef patty served on steamed rice, topped with rich brown gravy and a perfectly fried egg — a hearty Hawaiian comfort classic."
@@ -196,7 +196,7 @@ function Featuring() {
       />
 
       <FeaturedDishSection
-        imageSrc="/Images/featuring/4.webp"
+        imageSrc="/Images/ProductImg_LoadedFries.webp"
         alt="Loaded Fries"
         title="Loaded Fries"
         description="Golden fries topped with cheese, bacon, and our signature Hawaiian sauces"

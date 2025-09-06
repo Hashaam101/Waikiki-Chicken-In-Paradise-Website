@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "@/assets/Images/Logo.webp";
 
 const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => void }) => (
-    <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px]" style={{ background: 'var(--tt-bg-color)', color: 'var(--tt-color-text-gray)' }}>
+    <footer className="w-full px-[10px] md:px-[50px] lg:px-[70px] pb-[20px] sm:pb-[10px]" style={{ background: 'var(--tt-bg-color)', color: 'var(--tt-color-text-gray)' }}>
         <div className="text-h3 sm:text-h2 w-full">
             Waikiki Chicken In Paradise
         </div>
@@ -140,17 +140,17 @@ const Footer = ({ scrollToSection }: { scrollToSection?: (sectionId: string) => 
         </div>
         <div className="h-[60px]" />
         {/* Bottom Bar */}
-        <div className="bg-primary rounded-full text-white w-[90%] mx-auto min-h-[37px] py-[10px] sm:px-[50px] md:px-[100px]">
+        <div className="bg-primary rounded-full text-white w-[90%] mx-auto min-h-[37px] py-[10px] sm:px-[50px] md:px-[100px] ">
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-center text-normal4 gap-[20px]">
                 <p className="hidden sm:block">
                     Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
                 </p>
                 <p className="text-nowrap">
-                    Made with <a target="_blank" href="http://tableturnerr.com" className="hover:underline cursor-pointer">TableTurnerr.com</a>
+                    Made with <a target="_blank" href="http://tableturnerr.com" className="hover:underline cursor-pointer"><u>TableTurnerr.com</u></a>
                 </p>
             </div>
         </div>
-        <div className="justify-between items-center text-center text-[10px] mt-1 flex sm:hidden">
+        <div className="block sm:hidden w-full text-center text-[10px] mt-2">
             Waikiki Chicken In Paradise Inc. 2025 All Rights Reserved
         </div>
     </footer>
