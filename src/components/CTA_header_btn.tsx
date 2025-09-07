@@ -81,7 +81,7 @@ export const AnimatedCTAButton:React.FC<AnimatedCTAButtonProps> = ({ buttonLeft,
 
               onClick={buttonRight}
 						>
-							Order Now
+							Our Menu
 						</motion.div>
 						<div className='flex justify-end m-[5px]'>
               <div className="w-[31px] h-[31px] bg-black/25 rounded-[7px] flex items-center justify-center"

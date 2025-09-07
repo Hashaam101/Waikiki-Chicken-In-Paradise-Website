@@ -41,7 +41,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
     iconColor = "text-white",
     iconHoverColor = "text-white",
     type = "button",
-    target = "_blank",
+    target,
     rel = "noopener noreferrer"
 }) => {
 
@@ -72,9 +72,10 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({
 
     // If href is provided, render as an anchor tag (link)
     if (href) {
-        // Always apply target and rel if provided, for both internal and external links
+        // If target isn't specified and this is an internal link (starts with '/'), open in the same tab
+        const resolvedTarget = target ?? (href.startsWith('/') ? '_self' : '_blank');
         return (
-            <a href={href} target={target} rel={rel}>
+            <a href={href} target={resolvedTarget} rel={rel}>
                 {buttonContent}
             </a>
         );

@@ -93,7 +93,7 @@ const Home = React.memo(function Home() {
           />
 
           <ThemeButton
-            text="Order Online"
+            text="Our Menu"
             textClassname="pr-[8px] pl-[14px]"
             textColor="text-[var(--tt-color-text-gray)]"
             className="bg-transparent border-2 transition-all duration-200 hover:bg-primary-dark hover:text-white border-white/10 hover:border-primary-dark"

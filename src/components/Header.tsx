@@ -87,7 +87,7 @@ function Header( {onClick} : {onClick: () => void}) {
         <div className="flex justify-end w-full">
             <AnimatedCTAButton 
               buttonLeft={() => { router.push("tel:+1(843)-478-8609") }}
-              buttonRight={() => { window.open("/menu", "_blank") }}
+              buttonRight={() => { router.push('/menu'); }}
             />
         </div>
       </div>
